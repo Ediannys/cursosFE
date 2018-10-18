@@ -1,0 +1,31 @@
+<mat-toolbar class="example-header">
+  <div class="avatar-box">
+    <img src="../../../assets/img/avatar.png" alt="avatar" width="35">
+  </div>
+  Bienvenido Administrador
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" opened class="example-sidenav">
+    <h2>Elija una Opcion</h2>  
+    <div>
+      <button mat-stroked-button routerLink="/admin/agregar_p">Agregar Profesor</button>
+      <button mat-stroked-button routerLink="/admin/agregar_c">Agregar Curso</button>
+      <button mat-stroked-button routerLink="/admin/eliminar_p">Eliminar Profesor</button>
+      <button mat-stroked-button routerLink="/admin/eliminar_c">Eliminar Curso</button>
+      <button mat-stroked-button routerLink="/admin/asignar_curso">Asignar Curso a Profesor</button>
+      <button mat-stroked-button routerLink="/admin/enviar_certificados">Verificar Transferencia</button>
+      <button mat-stroked-button routerLink="/admin/verificar_transferencia">Enviar Certificados</button>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="contenedor">
+      <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<mat-toolbar class="example-footer">
+  <small>
+    <p>2018 - Ediannys Gonzalez, Manuel Meneses &copy;</p>
+  </small>
+</mat-toolbar>
